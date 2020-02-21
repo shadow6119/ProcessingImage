@@ -27,6 +27,10 @@ namespace ProcessingImage
 
             img = new Bitmap(path);
 
+            ImageData imgData = new ImageData(img);
+           
+            img = imgData.GenerateBitmap();
+
             pictureBox.Image = img;
         }
         //画像保存
@@ -55,6 +59,27 @@ namespace ProcessingImage
             {
                 return null;
             }
+        }
+
+        private void GrayScaleBrightness_Click(object sender, EventArgs e)
+        {
+            ImageData imgData = new ImageData(img);
+            imgData.BrightnessGray();
+            img = imgData.GenerateBitmap();
+            pictureBox.Image = img;
+        }
+
+        private void GrayScaleLuminunce_Click(object sender, EventArgs e)
+        {
+            ImageData imgData = new ImageData(img);
+            imgData.LuminanceGray();
+            img = imgData.GenerateBitmap();
+            pictureBox.Image = img;
+        }
+
+        private void Binarization_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

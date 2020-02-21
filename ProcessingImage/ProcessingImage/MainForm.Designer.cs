@@ -33,13 +33,12 @@
             this.SelectImageButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.GrayScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GrayBrightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GrayBrightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GrayLuminanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BinaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.モザイクToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.エッジ抽出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.回転ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.z軸周りToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.明るさ調整ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.コントラストToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveImageButton = new System.Windows.Forms.Button();
@@ -75,9 +74,9 @@
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.GrayScaleToolStripMenuItem,
-            this.BinaryToolStripMenuItem,
             this.モザイクToolStripMenuItem,
             this.エッジ抽出ToolStripMenuItem,
+            this.BinaryToolStripMenuItem,
             this.回転ToolStripMenuItem,
             this.明るさ調整ToolStripMenuItem,
             this.コントラストToolStripMenuItem});
@@ -91,29 +90,32 @@
             // GrayScaleToolStripMenuItem
             // 
             this.GrayScaleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GrayBrightToolStripMenuItem,
+            this.GrayBrightnessToolStripMenuItem,
             this.GrayLuminanceToolStripMenuItem});
             this.GrayScaleToolStripMenuItem.Name = "GrayScaleToolStripMenuItem";
             this.GrayScaleToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.GrayScaleToolStripMenuItem.Text = "グレースケール化";
             // 
-            // GrayBrightToolStripMenuItem
+            // GrayBrightnessToolStripMenuItem
             // 
-            this.GrayBrightToolStripMenuItem.Name = "GrayBrightToolStripMenuItem";
-            this.GrayBrightToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.GrayBrightToolStripMenuItem.Text = "明度変換";
+            this.GrayBrightnessToolStripMenuItem.Name = "GrayBrightnessToolStripMenuItem";
+            this.GrayBrightnessToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.GrayBrightnessToolStripMenuItem.Text = "明度変換";
+            this.GrayBrightnessToolStripMenuItem.Click += new System.EventHandler(this.GrayScaleBrightness_Click);
             // 
             // GrayLuminanceToolStripMenuItem
             // 
             this.GrayLuminanceToolStripMenuItem.Name = "GrayLuminanceToolStripMenuItem";
             this.GrayLuminanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.GrayLuminanceToolStripMenuItem.Text = "輝度変換";
+            this.GrayLuminanceToolStripMenuItem.Click += new System.EventHandler(this.GrayScaleLuminunce_Click);
             // 
             // BinaryToolStripMenuItem
             // 
             this.BinaryToolStripMenuItem.Name = "BinaryToolStripMenuItem";
             this.BinaryToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.BinaryToolStripMenuItem.Text = "二値化";
+            this.BinaryToolStripMenuItem.Click += new System.EventHandler(this.Binarization_Click);
             // 
             // モザイクToolStripMenuItem
             // 
@@ -129,17 +131,9 @@
             // 
             // 回転ToolStripMenuItem
             // 
-            this.回転ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.z軸周りToolStripMenuItem});
             this.回転ToolStripMenuItem.Name = "回転ToolStripMenuItem";
             this.回転ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.回転ToolStripMenuItem.Text = "回転";
-            // 
-            // z軸周りToolStripMenuItem
-            // 
-            this.z軸周りToolStripMenuItem.Name = "z軸周りToolStripMenuItem";
-            this.z軸周りToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.z軸周りToolStripMenuItem.Text = "Z軸周り";
             // 
             // 明るさ調整ToolStripMenuItem
             // 
@@ -197,9 +191,8 @@
         private System.Windows.Forms.ToolStripMenuItem 明るさ調整ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem コントラストToolStripMenuItem;
         private System.Windows.Forms.Button SaveImageButton;
-        private System.Windows.Forms.ToolStripMenuItem GrayBrightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GrayBrightnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GrayLuminanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem z軸周りToolStripMenuItem;
     }
 }
 
